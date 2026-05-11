@@ -1,0 +1,12 @@
+{
+  "name": "@shunt/discord-bridge",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "bun run index.ts"
+  },
+  "dependencies": {
+    "@shunt/shared": "workspace:*",
+    "discord.js": "^14.18.0"
+  }
+}

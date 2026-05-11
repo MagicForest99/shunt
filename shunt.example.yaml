@@ -1,0 +1,38 @@
+# shunt configuration — copy this file to `shunt.yaml` and edit.
+#
+# See README.md for the full setup walkthrough.
+
+discord:
+  # Read the bot token from this env var (recommended).
+  # Alternatively, set `token:` inline — but don't commit that.
+  token_env: DISCORD_BOT_TOKEN
+  guild_id: "YOUR_GUILD_ID"
+
+dashboard:
+  port: 9000
+
+# One entry per project. Each project:
+#   - maps to one Discord channel
+#   - runs in its own terminal multiplexer session
+#   - gets its own discord-bridge process
+#
+# Ports must be unique per project.
+projects:
+  my-project:
+    path: /absolute/path/to/your/project
+    fakechat_port: 8787      # CC's fakechat plugin WebSocket port
+    bridge_port: 8901        # discord-bridge health/API port
+    discord_channel_id: "YOUR_CHANNEL_ID"
+
+  # another-project:
+  #   path: /absolute/path/to/another
+  #   fakechat_port: 8788
+  #   bridge_port: 8902
+  #   discord_channel_id: "YOUR_OTHER_CHANNEL_ID"
+
+session_manager:
+  version_check_interval: 300  # seconds — how often to poll `claude --version`
+  restart_delay: 5             # seconds between rolling restarts
+  health_check_interval: 60    # seconds
+  multiplexer: zellij          # zellij | tmux | screen
+  session_prefix: "cc-"        # sessions named cc-my-project, etc.

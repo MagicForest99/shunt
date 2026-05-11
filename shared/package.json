@@ -1,0 +1,9 @@
+{
+  "name": "@shunt/shared",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "config.ts",
+  "dependencies": {
+    "yaml": "^2.7.1"
+  }
+}

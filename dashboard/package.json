@@ -1,0 +1,11 @@
+{
+  "name": "@shunt/dashboard",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "bun run index.ts"
+  },
+  "dependencies": {
+    "@shunt/shared": "workspace:*"
+  }
+}
