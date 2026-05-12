@@ -11,6 +11,8 @@ One Discord channel → one project → one Claude Code session running in your 
 └──────────────┘      └───────────────┘      └─────────────────┘      └───────────────┘
 ```
 
+![shunt dashboard](docs/dashboard.png)
+
 ## Why shunt
 
 - **It's a harness, not a replacement.** Claude Code does all the work. shunt just routes messages and keeps sessions alive. Every CC feature — plugins, skills, hooks, subagents, memory, compaction — works automatically. When CC ships a new release, shunt auto-detects and does a rolling restart.
